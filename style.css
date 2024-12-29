@@ -1,3 +1,84 @@
-* {
-    outline: 2px solid red;
+*{
+  margin: 0;
+  padding: 0;  
+  box-sizing: border-box;
+  line-height: 2;
+}
+
+body {
+  font-family: "Roboto Mono", serif;
+  font-optical-sizing: auto;
+  font-weight:100px;
+  font-style: normal;
+  background-color: #FFFFFF;
+  margin: 0 auto;
+}
+
+header{
+  display: flex;
+  justify-content: space-around;
+  align-items: center‚;
+  margin-inline: 10px;
+}
+
+.slayingthedragon{
+  align-self: flex-start;
+  font-weight: 800;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+
+}
+.center{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  gap : 4rem;
+  color: grey;
+  flex: 1;
+  
+}
+.rightside{
+  align-items: flex-end ;
+  
+}
+button{
+  background-color: black;
+  color: #FFFFFF;
+  padding: 0 10px;
+}
+.button1, .button2, .button3 {
+  border-radius: 12px;
+  cursor: pointer;
+  font-family: inherit;
+}
+.text{
+  text-wrap: 10ch;
+  height: 300px;
+  align-items: center;
+}
+h1{
+  width: 500px;
+  color: black;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  font-weight: 900;
+}
+h3{
+  color:grey;
+  text-align: center;
+  font-weight: 400;
+  width: 500px;
+  margin: 0 auto;
+}
+.button3 { 
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  width: 150px;
+  border-radius: 14px;
+  padding: 6px 7px;
+  font-weight: 500;
 }

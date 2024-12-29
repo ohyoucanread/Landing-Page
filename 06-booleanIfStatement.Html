@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <p>Rock paper scissors</p>
+
+    <!-- ROCK FONCTION -->
+    <button onclick="
+        const random = (Math.random());
+        let computerMove ='';
+
+        if(random < (1/3) && random >= 0) {
+
+        computerMove = 'Rock';
+        }
+        else if ( (1/3) <= random && random < (2/3) ) {
+        computerMove = 'Scissors';
+        }
+        else if (random >= (2/3) && random <= 1 ) {
+
+        computerMove = 'Paper';    
+        }
+        console.log(computerMove);
+        let result='';
+
+        if (computerMove === 'Rock'){
+            result = 'Draw';
+        }
+        else if (computerMove ==='Paper'){
+            result ='Lost';
+        }
+        else if (computerMove ==='Scissors') {
+            result = ' win';
+        }
+
+        alert(`Compture Move is : ${computerMove} and your move was rock resulting in a ${result} `);
+    ">Rock </button>    
+    <!-- PAPER FONCTION -->
+    <button onclick="
+    const random2 = (Math.random());
+    let computerMove2 ='';
+
+    if(random2 < (1/3) && random2 >= 0) {
+
+    computerMove2 = 'Rock';
+    }
+    else if ( (1/3) <= random2 && random2 < (2/3) ) {
+    computerMove2 = 'Scissors';
+    }
+    else if (random2 >= (2/3) && random2 <= 1 ) {
+
+    computerMove2 = 'Paper';    
+    }
+    console.log(computerMove2);
+    let result2='';
+
+    if (computerMove2 === 'Rock'){
+        result2 = 'Win';
+    }
+    else if (computerMove2 ==='Paper'){
+        result2 ='draw';
+    }
+    else if (computerMove2 ==='Scissors') {
+        result2 = 'Lost';
+    }
+
+    alert(`Compture Move is : ${computerMove2} and your move was Paper resulting in a ${result2}`);
+    
+    ">Paper </button>
+        <!-- SCISSORS FONCTION -->
+
+    <button onclick="
+    const random3 = (Math.random());
+    let computerMove3 ='';
+
+    if(random3 < (1/3) && random3 >= 0) {
+
+    computerMove3 = 'Rock';
+    }
+    else if ( (1/3) <= random3 && random3 < (2/3) ) {
+    computerMove3 = 'Scissors';
+    }
+    else if (random3 >= (2/3) && random3 <= 1 ) {
+
+    computerMove3 = 'Paper';    
+    }
+    console.log(computerMove3);
+    
+    let result3='';
+
+    if (computerMove3 === 'Rock'){
+        result3 = 'lost';
+    }
+    else if (computerMove3 ==='Paper'){
+        result3 ='win';
+    }
+    else if (computerMove3 ==='Scissors') {
+        result3 = 'Draw';
+    }
+
+    alert(`Compture Move is : ${computerMove3} and your move was Scissors resulting in a ${result3}`);
+   
+    ">scissors </button>
+<script>
+random ="";
+</script>    
+</body>
+</html>
