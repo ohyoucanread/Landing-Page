@@ -1,20 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+<html>
+  <head></head>
+  <body>
 
-<script>
+    <button onclick="
+        clickHeads();
+    ">heads</button>
+    <button onclick="
+        clickTails();
+    ">tails</button>
 
-    const randomNumber=Math.random();
-    const result= randomNumber < 0.5 ? 'heads' : 'tails';  
-    const guess = 'heads';
-    console.log(result === guess ? 'You win' : 'You lose'); 
-    
-</script>
+    <script>
+   const score = JSON.parse(localStorage.getItem('score')) || {
+            wins : 0,
+            losses : 0,
+        };
+      
 
-</body>
+    function clickHeads() {
+      const randomNumber = Math.random();
+      const result = randomNumber < 0.5 ? 'heads' : 'tails';
+
+      const guess = 'heads';
+      
+      guess === result ? score.wins+=1: score.losses+=1 ;
+      
+      localStorage.setItem('score' , JSON.stringify(score));
+      alert(`wins : ${score.wins} loss : ${score.losses}`);
+      console.log(localStorage.getItem('score'));
+      console.log(score)
+
+
+    }
+    function clickTails() {
+      const randomNumber = Math.random();
+      const result = randomNumber < 0.5 ? 'heads' : 'tails';
+
+      const guess = 'tails';
+      
+      guess === result ? score.wins+=1: score.losses+=1 ;
+      const update = localStorage.setItem('score' , JSON.stringify(score));
+      alert(`wins : ${score.wins} loss : ${score.losses}`);
+    console.log(localStorage.getItem('score'));
+    }
+    </script>
+  </body>
 </html>

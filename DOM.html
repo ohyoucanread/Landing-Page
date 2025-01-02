@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+<p> Youtube Subscribe button</p>
+<button onclick="
+        changeInnerText ();
+        " class="js_tbn_1">Subscribe</button>
+
+<p>Amzon shipping calculator</p>
+<p>Orders under 40$ = +10$ Shipping.</p>
+<p>Orders over 40$ = FREE shippng.</p>
+<input class="js_value" placeholder="enter price" onkeydown="
+
+        console.log(event.key);
+        handleEnterKey (event)
+
+">
+<button class="js_calculator" onclick="
+calculateTotal();
+">calculate</button>
+<p class="display_Result"></p>
+
+    <script>
+        
+        function changeInnerText() {
+            const buttonElement = document.querySelector('.js_tbn_1');
+            if (buttonElement.innerText === 'subscribe') {
+            buttonElement.innerText = 'Subscribed';
+        } else {
+            buttonElement.innerText = 'subscribe';
+        }
+        }
+        function calculateTotal(){
+            
+            const costInput = document.querySelector('.js_value');
+            let cost = Number(costInput.value);
+            if (cost < 40){
+                cost = cost + 10;
+        
+            }
+            document.querySelector('.display_Result').innerText= `$${cost}`;
+        
+        }
+        function handleEnterKey (event){
+            if (event.key === 'Enter') {
+            calculateTotal();
+        }
+        }
+    </script>
+    
+</body>
+</html>
